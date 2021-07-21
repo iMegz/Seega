@@ -4,6 +4,7 @@ const gameWindow = elementById("game");
 const phaseInfo = elementById("phaseInfo");
 const turnInfo = elementById("turnInfo");
 const winnerInfo = elementById("winner");
+const tut = elementById("tut");
 
 const colors = ["420000","1d0042","ff0000","6200ff"];
 const cells = (new Array(9)).fill(null,0,9);
@@ -11,7 +12,7 @@ let moves = 0;
 let selectedCell = null;
 let gameFinised = false;
 let playerTurn = false;
-let gamePhase = false;// false-> Positioning, true-> Playing 
+let gamePhase = false;// false-> Positioning, true-> Moving 
 
 const clearWindow = ()=>{
     moves = 0;
@@ -35,7 +36,7 @@ const onCellClicked = (cell)=>{
         moves++;
         if(moves == 6) {
             gamePhase = true;
-            phaseInfo.innerHTML = "<h2>Playing Phase</h2>";
+            phaseInfo.innerHTML = "<h2>Moving Phase</h2>";
         }
     }else if(gamePhase){
         if(selectedCell == null && cells[cell.id.substr(5,1)] != null && cells[cell.id.substr(5,1)] == playerTurn*1){
@@ -89,6 +90,7 @@ const checkForWinner = ()=>{
 }
 const play = ()=>{
     winnerInfo.style.display = "none";
+    tut.style.display = "none";
     clearWindow();
     
 }

@@ -97,6 +97,32 @@ main{
     color: #fff;
     transition: all 0.3s;
 }
+#tut{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5px;
+    background-color: #85bdbf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tut p{
+    font-size: 1.4em;
+    width: 60%;
+    margin: 1em auto;
+}
+#tut span{
+    display: inline-block;
+    margin-top: 1em;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+
 #game{
     margin: auto;
     height: 30em;
