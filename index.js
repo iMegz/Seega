@@ -55,7 +55,7 @@ const onCellClicked = (cell)=>{
         }
     }
     
-}
+} 
 const placeMark = (cell)=>{
     cells[cell.id.substr(5,1)] = playerTurn*1;
     elementById(cell.id).innerHTML = `<div class="player-${playerTurn*1}"></div>`;
