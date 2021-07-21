@@ -5,11 +5,14 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
 }
+::-webkit-scrollbar{
+    width: 0;
+}
 html,body{
     height: 100vh;
 }
 header{
-    width: 100vw;
+    width: 100%;
     height: 5em;
     background-color: #57737a;
     display: flex;
@@ -69,7 +72,7 @@ main{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 5px;
 }
@@ -97,18 +100,32 @@ main{
     color: #fff;
     transition: all 0.3s;
 }
+footer{
+    background-color: #57737a;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+footer a{
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
 #tut{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 110vh;
     z-index: 5px;
     background-color: #85bdbf;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10vh;
 }
 
 #tut p{
